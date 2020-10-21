@@ -57,7 +57,8 @@ export default class App extends Component {
   };
 
   handleSearchFormSubmit = (query) => {
-    this.setState({ searchQuery: query, page: 1, imageList: [] });
+    const trimmedQuery = query.trim();
+    this.setState({ searchQuery: trimmedQuery, page: 1, imageList: [] });
   };
 
   render() {
